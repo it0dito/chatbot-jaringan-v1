@@ -1,0 +1,590 @@
+{
+  "metadata": {
+    "judul": "Dataset Pengujian Chatbot Pembelajaran Jaringan Komputer",
+    "versi": "1.2",
+    "bahasa": "id",
+    "encoding": "UTF-8",
+    "tujuan": "Pengujian chatbot pembelajaran berbasis RAG dan LLM, termasuk pengujian batas cakupan domain (boundary testing).",
+    "total_pertanyaan_dalam_domain": 71,
+    "total_pertanyaan_boundary": 20,
+    "total_seluruh_pertanyaan": 91
+  },
+  "kategori_dalam_domain": [
+    {
+      "id": "jaringan_komputer",
+      "nama": "Jaringan Komputer",
+      "jumlah_pertanyaan": 12,
+      "pertanyaan": [
+        {
+          "id": "JARKOM-001",
+          "pertanyaan": "Apa perbedaan mendasar antara fungsi Access Port dan Trunk Port dalam konfigurasi VLAN pada sebuah switch?",
+          "jawaban": "Access Port membawa lalu lintas dari satu VLAN dan umumnya terhubung ke perangkat akhir. Trunk Port membawa lalu lintas dari beberapa VLAN sekaligus, biasanya untuk menghubungkan switch dengan switch lain atau switch dengan router."
+        },
+        {
+          "id": "JARKOM-002",
+          "pertanyaan": "Mengapa Switch dinilai lebih efisien dan aman dibandingkan Hub dalam mengelola lalu lintas data di jaringan?",
+          "jawaban": "Switch bekerja pada Layer 2 dan meneruskan frame berdasarkan MAC Address ke port tujuan. Hub bekerja pada Layer 1 dan mengulang sinyal ke seluruh port, sehingga lebih banyak perangkat menerima lalu lintas yang sama dan potensi collision lebih besar."
+        },
+        {
+          "id": "JARKOM-003",
+          "pertanyaan": "Apa kelebihan dan kekurangan utama dari penggunaan topologi jaringan Mesh?",
+          "jawaban": "Topologi Mesh menyediakan banyak jalur alternatif sehingga meningkatkan redundansi dan keandalan. Kekurangannya adalah kebutuhan kabel atau koneksi yang banyak, biaya tinggi, serta konfigurasi dan pemeliharaan yang kompleks."
+        },
+        {
+          "id": "JARKOM-004",
+          "pertanyaan": "Jelaskan perbedaan antara Jaringan Pribadi (Private Network) dan Jaringan Publik (Public Network) beserta contohnya!",
+          "jawaban": "Private Network dibatasi untuk individu atau organisasi tertentu, misalnya LAN rumah atau kantor. Public Network menyediakan akses bagi banyak pengguna, misalnya internet atau hotspot publik."
+        },
+        {
+          "id": "JARKOM-005",
+          "pertanyaan": "Apa fungsi dari perintah `ip route 0.0.0.0 0.0.0.0 [Next-Hop IP]` dalam konfigurasi routing pada router?",
+          "jawaban": "Perintah tersebut membuat default route. Paket yang tujuannya tidak cocok dengan entri rute yang lebih spesifik di tabel routing diteruskan ke alamat next-hop yang ditentukan."
+        },
+        {
+          "id": "JARKOM-006",
+          "pertanyaan": "Bagaimana pemetaan penggabungan lapisan-lapisan pada model OSI (7 lapisan) ke dalam model TCP/IP (4 lapisan)?",
+          "jawaban": "Application, Presentation, dan Session OSI dipetakan ke Application TCP/IP; Transport ke Transport; Network ke Internet; serta Data Link dan Physical ke Network Access atau Link."
+        },
+        {
+          "id": "JARKOM-007",
+          "pertanyaan": "Dalam konfigurasi Access Control List (ACL) pada router, apa perbedaan antara penempatan trafik inbound (in) dan outbound (out) pada sebuah interface?",
+          "jawaban": "ACL inbound memeriksa paket ketika memasuki interface router. ACL outbound memeriksa paket ketika akan meninggalkan interface router."
+        },
+        {
+          "id": "JARKOM-008",
+          "pertanyaan": "Mengapa jumlah maksimal bit yang dapat digunakan untuk Network ID dalam aturan pembuatan subnet mask dibatasi hanya sampai 30 bit (/30)?",
+          "jawaban": "Dalam subnet IPv4 konvensional yang membutuhkan alamat network, broadcast, dan minimal dua alamat host, prefix /30 menyisakan dua bit host. Namun, /31 dapat digunakan pada tautan point-to-point tertentu berdasarkan RFC 3021, sehingga /30 bukan batas mutlak untuk semua penggunaan."
+        },
+        {
+          "id": "JARKOM-009",
+          "pertanyaan": "Apa fungsi dari kabel khusus jenis Rollover (Kabel Konsol) dan bagaimana karakteristik susunan pinnya?",
+          "jawaban": "Kabel Rollover digunakan untuk mengakses port konsol perangkat jaringan. Susunan pin di satu ujung dibalik pada ujung lainnya: 1 ke 8, 2 ke 7, 3 ke 6, 4 ke 5, dan seterusnya."
+        },
+        {
+          "id": "JARKOM-010",
+          "pertanyaan": "Bagaimana cara kerja protokol routing dinamis OSPF (Open Shortest Path First) dalam menentukan jalur pengiriman data terbaik?",
+          "jawaban": "OSPF adalah protokol link-state. Router bertukar LSA, membangun link-state database untuk area terkait, lalu menjalankan algoritma Dijkstra atau Shortest Path First untuk menghitung jalur dengan total cost terendah."
+        },
+        {
+          "id": "JARKOM-011",
+          "pertanyaan": "Berapa jumlah subnet dan jumlah host valid per subnet yang dihasilkan dari alamat jaringan kelas C 192.168.1.0/26, serta sebutkan blok subnet-nya?",
+          "jawaban": "Dengan asumsi jaringan induk 192.168.1.0/24 dibagi menjadi subnet /26, terbentuk 4 subnet. Enam bit host menghasilkan 2^6 - 2 = 62 host valid per subnet. Ukuran blok 64, sehingga alamat network subnet adalah 192.168.1.0, 192.168.1.64, 192.168.1.128, dan 192.168.1.192."
+        },
+        {
+          "id": "JARKOM-012",
+          "pertanyaan": "Apa perbedaan sifat dan mekanisme kerja antara protokol TCP (Transmission Control Protocol) dan UDP (User Datagram Protocol) pada lapisan Transport?",
+          "jawaban": "TCP bersifat connection-oriented dan menyediakan pengiriman andal melalui sequence number, acknowledgement, retransmisi, serta pengurutan data. UDP bersifat connectionless dan tidak menyediakan jaminan pengiriman atau pengurutan bawaan, sehingga overhead lebih rendah dan cocok untuk aplikasi real-time tertentu."
+        }
+      ]
+    },
+    {
+      "id": "jaringan_nirkabel",
+      "nama": "Jaringan Nirkabel",
+      "jumlah_pertanyaan": 18,
+      "pertanyaan": [
+        {
+          "id": "NIRKABEL-001",
+          "sumber_materi": "5. Access Control pdf.pdf",
+          "pertanyaan": "Apa perbedaan mendasar antara kebijakan Mandatory Access Control (MAC) dan Discretionary Access Control (DAC)?",
+          "jawaban": "MAC menerapkan label keamanan dan aturan terpusat untuk menentukan akses subjek terhadap objek. DAC memberikan kewenangan kepada pemilik sumber daya untuk menentukan siapa yang boleh mengaksesnya."
+        },
+        {
+          "id": "NIRKABEL-002",
+          "sumber_materi": "Antena dan Gain pdf.pdf",
+          "pertanyaan": "Mengapa dalam instalasi jaringan nirkabel jarak jauh (Line of Sight), area 1st Fresnel Zone harus dijaga agar tetap bersih dari hambatan seperti pohon atau gedung?",
+          "jawaban": "Hambatan pada zona Fresnel dapat menyebabkan difraksi dan mengganggu propagasi gelombang sehingga kualitas serta daya terima sinyal menurun, meskipun kedua antena terlihat secara visual. Sekitar 60% clearance zona Fresnel pertama lazim dijadikan acuan minimum."
+        },
+        {
+          "id": "NIRKABEL-003",
+          "sumber_materi": "Apa-itu-WiMAX pdf.pdf",
+          "pertanyaan": "Bagaimana cara kerja metode Time Division Duplex (TDD) pada WiMAX dalam mengatur lalu lintas pengiriman dan penerimaan data?",
+          "jawaban": "TDD menggunakan kanal frekuensi yang sama untuk uplink dan downlink, tetapi memisahkan keduanya berdasarkan slot waktu. Durasi slot dapat disesuaikan dengan kebutuhan upload dan download."
+        },
+        {
+          "id": "NIRKABEL-004",
+          "sumber_materi": "Desain-Antena-untuk-Komunikasi-Nirkabel.pdf",
+          "pertanyaan": "Jelaskan fungsi dari tiga elemen utama penyusun antena directional Yagi-Uda!",
+          "jawaban": "Dipole merupakan elemen aktif. Reflektor berada di belakang elemen aktif untuk membantu membentuk pola radiasi ke arah depan. Director berada di depan elemen aktif untuk meningkatkan pengarahan energi ke arah yang dituju."
+        },
+        {
+          "id": "NIRKABEL-005",
+          "sumber_materi": "Jaringan_Nirkabel_Seluler_LPWAN.pdf",
+          "pertanyaan": "Apa perbedaan utama antara teknologi LoRa dan LoRaWAN?",
+          "jawaban": "LoRa adalah teknologi lapisan fisik atau modulasi radio untuk komunikasi jarak jauh dengan laju data rendah. LoRaWAN adalah protokol dan arsitektur jaringan yang mengatur akses media, keamanan, perangkat, gateway, dan Network Server."
+        },
+        {
+          "id": "NIRKABEL-006",
+          "sumber_materi": "Keamanan WLAN_ Evolusi Ancaman.pdf",
+          "pertanyaan": "Bagaimana mekanisme serangan gabungan antara Deauthentication dan Evil Twin bekerja untuk menjebak korban di jaringan Wi-Fi publik?",
+          "jawaban": "Pelaku menyiapkan access point palsu dengan SSID yang menyerupai jaringan sah. Paket deauthentication dapat digunakan untuk mengganggu koneksi korban ke access point asli, sehingga korban berpotensi tersambung ke access point palsu. Perpindahan otomatis bergantung pada konfigurasi dan perilaku perangkat korban."
+        },
+        {
+          "id": "NIRKABEL-007",
+          "sumber_materi": "Konfigurasi Jaringan Nirkabel.pdf",
+          "pertanyaan": "Mengapa pemilihan channel pada pita frekuensi 2.4 GHz sering disarankan menggunakan channel 1, 6, atau 11?",
+          "jawaban": "Dengan lebar kanal 20 MHz dan pengaturan kanal yang umum, kanal 1, 6, dan 11 tidak saling tumpang tindih. Pemilihan ini dapat mengurangi interferensi antar-access point yang berdekatan. Ketersediaan kanal bergantung pada regulasi negara."
+        },
+        {
+          "id": "NIRKABEL-008",
+          "sumber_materi": "Materi Tambahan Antena.pdf",
+          "pertanyaan": "Apa yang dimaksud dengan sifat Reciprocity pada sebuah antena?",
+          "jawaban": "Reciprocity adalah prinsip bahwa karakteristik transmisi dan penerimaan antena pada kondisi dan medium yang sama saling berkaitan. Pola radiasi saat memancar secara umum sama dengan pola respons penerimaannya."
+        },
+        {
+          "id": "NIRKABEL-009",
+          "sumber_materi": "Pertemuan 1 - Jaringan Nirkabel.pdf",
+          "pertanyaan": "Apa perbedaan mendasar dalam struktur komunikasi antara jaringan Wi-Fi mode Ad-Hoc dan mode Infrastruktur?",
+          "jawaban": "Mode Ad-Hoc memungkinkan perangkat berkomunikasi langsung secara peer-to-peer tanpa access point pusat. Mode Infrastruktur menggunakan access point sebagai pusat komunikasi yang menghubungkan klien nirkabel dan dapat menghubungkannya ke jaringan kabel."
+        },
+        {
+          "id": "NIRKABEL-010",
+          "sumber_materi": "Pertemuan 2 Bluetooth.pdf",
+          "pertanyaan": "Bagaimana cara Bluetooth versi 3.0 + HS (High Speed) mencapai kecepatan transfer data hingga 24 Mbps?",
+          "jawaban": "Bluetooth 3.0 + HS menggunakan Alternative MAC/PHY (AMP). Bluetooth menangani penemuan perangkat, pairing, dan pembentukan koneksi, sedangkan transfer data berkecepatan tinggi dapat dialihkan melalui radio IEEE 802.11 yang didukung perangkat."
+        },
+        {
+          "id": "NIRKABEL-011",
+          "sumber_materi": "Pertemuan 4 Transmisi Wireless.pdf",
+          "pertanyaan": "Apa yang terjadi pada kekuatan sinyal nirkabel ketika mengalami fenomena Absorption dan Multipath?",
+          "jawaban": "Absorption terjadi ketika energi gelombang diserap material sehingga daya sinyal berkurang. Multipath terjadi ketika sinyal tiba melalui beberapa jalur akibat pantulan, sehingga dapat terjadi penguatan atau pelemahan akibat interferensi konstruktif maupun destruktif."
+        },
+        {
+          "id": "NIRKABEL-012",
+          "sumber_materi": "Pertemuan 5 - Parameter Antena.pdf",
+          "pertanyaan": "Bagaimana perbedaan kondisi dan fungsi lapisan ionosfer pada siang hari dan malam hari dalam propagasi Sky Wave?",
+          "jawaban": "Pada siang hari, radiasi matahari meningkatkan ionisasi dan membentuk lapisan D, E, serta F yang dapat terbagi menjadi F1 dan F2. Lapisan D cenderung menyerap gelombang HF. Pada malam hari lapisan D melemah atau menghilang dan F1 serta F2 cenderung menyatu, sehingga kondisi propagasi HF berubah."
+        },
+        {
+          "id": "NIRKABEL-013",
+          "sumber_materi": "Pertemuan 9 - WiMAX.pdf",
+          "pertanyaan": "Mengapa penggunaan pita frekuensi 3,5 GHz untuk layanan Fixed WiMAX dapat menimbulkan isu di Indonesia?",
+          "jawaban": "Penggunaan pita 3,5 GHz perlu memperhatikan alokasi frekuensi dan layanan lain yang telah beroperasi pada pita terkait, termasuk layanan satelit. Koeksistensi tanpa pengaturan teknis dan regulasi yang tepat dapat menimbulkan interferensi."
+        },
+        {
+          "id": "NIRKABEL-014",
+          "sumber_materi": "Pertemuan 10 - VSAT.pdf",
+          "pertanyaan": "Sebutkan dua segmen utama dalam arsitektur jaringan VSAT beserta komponen-komponen penyusunnya!",
+          "jawaban": "Ground Segment mencakup perangkat bumi seperti Indoor Unit atau modem satelit dan Outdoor Unit yang meliputi antena, feed, BUC, serta LNB. Space Segment mencakup satelit yang menerima, memproses atau menguatkan, lalu meneruskan sinyal."
+        },
+        {
+          "id": "NIRKABEL-015",
+          "sumber_materi": "RPS Jaringan Nirkabel 2024.docx",
+          "pertanyaan": "Apa itu IoT dan teknologi jaringan nirkabel",
+          "jawaban": "Internet of Things (IoT) adalah ekosistem perangkat fisik—mulai dari sensor suhu, kamera CCTV, kendaraan, hingga mesin pabrik—yang dilengkapi mikrokontroler, sensor, dan modul komunikasi untuk mengumpulkan serta bertukar data melalui internet tanpa campur tangan manusia secara langsung. Teknologi jaringan nirkabel (wireless) merupakan tulang punggung komunikasi yang menghubungkan perangkat IoT tersebut ke gateway atau server cloud menggunakan gelombang elektromagnetik tanpa kabel fisik."
+        },
+        {
+          "id": "NIRKABEL-016",
+          "sumber_materi": "Satelit pdf.pdf",
+          "pertanyaan": "Mengapa dalam sistem transmisi satelit frekuensi Uplink dan Downlink harus dibuat berbeda?",
+          "jawaban": "Pemisahan frekuensi uplink dan downlink membantu mencegah interferensi antara sinyal yang diterima dan dipancarkan kembali oleh sistem satelit serta memungkinkan pemisahan jalur komunikasi pada perangkat radio dan transponder."
+        },
+        {
+          "id": "NIRKABEL-017",
+          "sumber_materi": "Tutorial_Antena_Dipole.pdf",
+          "pertanyaan": "Berapa panjang total dan panjang masing-masing lengan kawat yang dibutuhkan untuk merakit antena Dipole 1/2 lambda pada frekuensi kerja 2,4 GHz?",
+          "jawaban": "Panjang gelombang teoritis pada 2,4 GHz sekitar 12,5 cm, sehingga setengah panjang gelombangnya sekitar 6,25 cm. Dipole setengah gelombang praktis biasanya sedikit lebih pendek dari nilai teoritis dan terdiri atas dua lengan hampir sama panjang. Dimensi akhir perlu disesuaikan dengan faktor kecepatan, diameter konduktor, dan lingkungan pemasangan."
+        },
+        {
+          "id": "NIRKABEL-018",
+          "sumber_materi": "WiMAX vs VSAT.pdf",
+          "pertanyaan": "Apa faktor utama yang menyebabkan pamor teknologi jaringan WiMAX di Indonesia meredup setelah sempat berkembang pada tahun 2011–2012?",
+          "jawaban": "Beberapa faktor yang berpengaruh adalah perkembangan ekosistem LTE yang lebih luas dan kompetitif, tantangan model bisnis, ketersediaan perangkat, investasi, serta kebijakan dan alokasi spektrum. Penurunan pemanfaatan tidak disebabkan oleh satu faktor tunggal."
+        }
+      ]
+    },
+    {
+      "id": "manajemen_jaringan",
+      "nama": "Manajemen Jaringan",
+      "jumlah_pertanyaan": 23,
+      "pertanyaan": [
+        {
+          "id": "MANJAR-001",
+          "sumber_materi": "1. Pengannta manajemen Jaringan.pdf",
+          "pertanyaan": "Apa perbedaan utama arsitektur jaringan Peer-to-Peer dan Client-Server?",
+          "jawaban": "Peer-to-Peer tidak bergantung pada server pusat dan perangkat dapat berbagi sumber daya secara langsung. Client-Server menggunakan server terpusat untuk menyediakan layanan dan mengelola permintaan klien."
+        },
+        {
+          "id": "MANJAR-002",
+          "sumber_materi": "3. Topologi Jaringan, Konektor dan Standar Pengkabelan.pdf",
+          "pertanyaan": "Apa perbedaan fungsi antara MDF (Main Distribution Frame) dan IDF (Intermediate Distribution Frame)?",
+          "jawaban": "MDF adalah titik distribusi utama untuk terminasi dan distribusi kabel backbone. IDF adalah titik distribusi perantara, umumnya di lantai atau area tertentu, yang menghubungkan perangkat pengguna ke MDF."
+        },
+        {
+          "id": "MANJAR-003",
+          "sumber_materi": "4. Spesifikasi Internet.pdf",
+          "pertanyaan": "Apa perbedaan antara Bit Rate dan Baud Rate dalam transmisi data?",
+          "jawaban": "Bit Rate adalah jumlah bit yang ditransmisikan per detik. Baud Rate adalah jumlah simbol atau perubahan keadaan sinyal per detik. Satu simbol dapat merepresentasikan satu atau lebih bit."
+        },
+        {
+          "id": "MANJAR-004",
+          "sumber_materi": "5. Networking Devices.pdf",
+          "pertanyaan": "Apa perbedaan cara kerja Switch dan Router dalam membagi domain jaringan?",
+          "jawaban": "Switch Layer 2 memisahkan collision domain pada setiap port dan umumnya meneruskan broadcast dalam VLAN yang sama. Router Layer 3 memisahkan broadcast domain antar-interface atau subnet dan meneruskan paket berdasarkan alamat IP."
+        },
+        {
+          "id": "MANJAR-005",
+          "sumber_materi": "6. Protokol Internet.pdf",
+          "pertanyaan": "Sebutkan empat lapisan pada Model DoD beserta padanannya pada Model OSI!",
+          "jawaban": "Process/Application mencakup Application, Presentation, dan Session OSI; Host-to-Host setara dengan Transport; Internet setara dengan Network; Network Access setara dengan Data Link dan Physical."
+        },
+        {
+          "id": "MANJAR-006",
+          "sumber_materi": "7. IP Addressing.pdf",
+          "pertanyaan": "Apa perbedaan fungsi blok alamat IPv4 Privat dengan APIPA?",
+          "jawaban": "IPv4 privat digunakan untuk komunikasi internal dan tidak dirutekan langsung di internet publik. APIPA menggunakan rentang 169.254.0.0/16 dan dapat diberikan otomatis ketika konfigurasi IPv4 melalui DHCP gagal serta tidak tersedia alamat lain."
+        },
+        {
+          "id": "MANJAR-007",
+          "sumber_materi": "8. IP Subnetting,.pdf",
+          "pertanyaan": "Apa tujuan utama dilakukannya subnetting pada jaringan IP?",
+          "jawaban": "Subnetting membagi jaringan IP menjadi beberapa subnet yang lebih kecil untuk mengatur penggunaan alamat IP, membatasi broadcast domain sesuai desain, meningkatkan pengelolaan, serta membantu isolasi gangguan dan penerapan kebijakan keamanan."
+        },
+        {
+          "id": "MANJAR-008",
+          "sumber_materi": "08. Manajemen-Identitas-dan-Akses.pdf",
+          "pertanyaan": "Sebutkan empat kategori faktor autentikasi yang sering dibahas dalam Multi-Factor Authentication (MFA)!",
+          "jawaban": "Kategori yang umum adalah sesuatu yang diketahui (password atau PIN), sesuatu yang dimiliki (token atau smartcard), sesuatu yang melekat pada diri (biometrik), dan faktor lokasi atau konteks. MFA secara ketat menggabungkan minimal dua faktor dari kategori berbeda."
+        },
+        {
+          "id": "MANJAR-009",
+          "sumber_materi": "10. Protokol Perutean.pdf",
+          "pertanyaan": "Apa perbedaan dasar protokol perutean Distance Vector dan Link State?",
+          "jawaban": "Distance Vector bertukar informasi rute dengan router tetangga dan menggunakan metrik tertentu, misalnya RIP menggunakan hop count. Link State menyebarkan informasi status link, membangun basis data topologi, lalu menghitung jalur menggunakan algoritma SPF seperti Dijkstra."
+        },
+        {
+          "id": "MANJAR-010",
+          "sumber_materi": "11. Switching dan Virtual LAN.pdf",
+          "pertanyaan": "Apa fungsi fitur BPDU Guard dan Port Akses Suara pada switch?",
+          "jawaban": "BPDU Guard melindungi port edge dengan menonaktifkan port ketika menerima BPDU yang tidak diharapkan, sesuai konfigurasi. Voice VLAN memisahkan lalu lintas telepon IP dari lalu lintas data PC meskipun menggunakan satu port fisik."
+        },
+        {
+          "id": "MANJAR-011",
+          "sumber_materi": "12. Jaringan nirkabel.pdf",
+          "pertanyaan": "Apa perbedaan enkripsi WPA dengan WPA2, serta fungsi Management Frame Protection (MFP)?",
+          "jawaban": "WPA generasi awal umumnya menggunakan TKIP, sedangkan WPA2 menggunakan AES-CCMP. Management Frame Protection membantu melindungi frame manajemen tertentu dari pemalsuan dan gangguan, sesuai dukungan standar 802.11w atau PMF."
+        },
+        {
+          "id": "MANJAR-012",
+          "sumber_materi": "13. Otentikasi dan Kontrol Akses.pdf",
+          "pertanyaan": "Apa yang dimaksud dengan Manajemen Out-of-Band pada server?",
+          "jawaban": "Manajemen Out-of-Band adalah pengelolaan server melalui jalur manajemen khusus yang terpisah dari jaringan produksi, misalnya iLO atau iDRAC, sehingga server tetap dapat diakses ketika jaringan utama terganggu."
+        },
+        {
+          "id": "MANJAR-013",
+          "sumber_materi": "14. Ancaman Jaringan dan Mitigasi.pdf",
+          "pertanyaan": "Bagaimana teknik Protocol Tunneling dapat digunakan untuk melewati kebijakan firewall?",
+          "jawaban": "Protocol tunneling mengenkapsulasi lalu lintas suatu protokol ke protokol lain. Teknik ini dapat disalahgunakan untuk menyamarkan komunikasi yang dilarang melalui protokol yang diizinkan firewall. Mitigasinya mencakup pembatasan egress, inspeksi protokol, dan logging."
+        },
+        {
+          "id": "MANJAR-014",
+          "sumber_materi": "15. Keamanan Fisik dan Risiko.pdf",
+          "pertanyaan": "Apa perbedaan firewall Stateless dan Stateful, serta perbedaan Cold Site dan Hot Site?",
+          "jawaban": "Firewall Stateless mengevaluasi paket secara individual tanpa melacak sesi, sedangkan Stateful melacak status koneksi. Cold Site menyediakan fasilitas dasar yang memerlukan persiapan sebelum operasional, sedangkan Hot Site memiliki infrastruktur dan sistem yang telah disiapkan untuk mengambil alih layanan lebih cepat."
+        },
+        {
+          "id": "MANJAR-015",
+          "sumber_materi": "Introduction - ManJar.pdf",
+          "pertanyaan": "Apa konsep dari Traffic Shaping (HTB/CBQ) dan Dynamic DNS (DDNS) dalam manajemen jaringan?",
+          "jawaban": "Traffic Shaping mengatur laju dan antrean lalu lintas untuk mengelola bandwidth dan QoS; HTB dan CBQ adalah contoh mekanisme class-based queuing. DDNS memperbarui pemetaan nama domain ketika alamat IP layanan berubah."
+        },
+        {
+          "id": "MANJAR-016",
+          "sumber_materi": "Pertemuan 2 - Instalasi Ubuntu Server.pdf",
+          "pertanyaan": "Sebutkan tiga tujuan utama manajemen jaringan dan alasan server umumnya dapat dijalankan tanpa GUI!",
+          "jawaban": "Tujuan utama manajemen jaringan mencakup kinerja, keandalan atau ketersediaan, dan keamanan. Server dapat dijalankan tanpa GUI untuk mengurangi penggunaan sumber daya, memperkecil komponen yang perlu dipelihara, dan mendukung administrasi melalui command line."
+        },
+        {
+          "id": "MANJAR-017",
+          "sumber_materi": "Pertemuan 3 - DNS Server.pdf",
+          "pertanyaan": "Apa perbedaan antara Iterative Query dan Recursive Query pada sistem DNS?",
+          "jawaban": "Pada recursive query, server DNS yang diminta bertanggung jawab mencari jawaban akhir atau mengembalikan kesalahan. Pada iterative query, server memberikan jawaban yang diketahui atau referral ke server lain, lalu resolver melanjutkan pencarian."
+        },
+        {
+          "id": "MANJAR-018",
+          "sumber_materi": "Pertemuan 4 - FTP dan Samba Server.pdf",
+          "pertanyaan": "Apa perbedaan mekanisme transfer berkas FTP dengan NFS, serta peran protokol SMB pada Samba?",
+          "jawaban": "FTP mentransfer berkas antara klien dan server. NFS menyediakan akses sistem berkas jarak jauh. Samba mengimplementasikan SMB/CIFS agar sistem Linux atau UNIX dapat berbagi berkas dan printer dengan lingkungan Windows."
+        },
+        {
+          "id": "MANJAR-019",
+          "sumber_materi": "Pertemuan 5 - Hak Akses File.pdf",
+          "pertanyaan": "Jelaskan tiga kategori kepemilikan hak akses berkas di Linux dan otoritas pengguna root!",
+          "jawaban": "Kategori izin berkas Linux adalah Owner, Group, dan Other. Masing-masing dapat memiliki izin Read, Write, dan Execute. Root memiliki hak administratif yang sangat luas dan umumnya dapat mengakses atau mengubah berkas meskipun izin biasa tidak mengizinkannya."
+        },
+        {
+          "id": "MANJAR-020",
+          "sumber_materi": "Pertemuan 6 - Web Server.pdf",
+          "pertanyaan": "Bagaimana perbedaan cara Web Server memproses dokumen statis dibandingkan halaman dinamis?",
+          "jawaban": "Dokumen statis disajikan dari konten yang tersimpan. Halaman dinamis dihasilkan atau dirakit saat diminta melalui pemrosesan aplikasi sisi server dan dapat melibatkan database sebelum hasilnya dikirim ke browser."
+        },
+        {
+          "id": "MANJAR-021",
+          "sumber_materi": "Modul Manajemen Jaringan 2024.pdf",
+          "pertanyaan": "Mengapa komunikasi antar-VLAN membutuhkan Router, dan apa perbedaan kriptografi Symmetric dengan Asymmetric pada VPN?",
+          "jawaban": "Komunikasi antar-VLAN membutuhkan fungsi Layer 3 karena setiap VLAN umumnya memiliki broadcast domain dan subnet berbeda. Routing dapat dilakukan oleh router atau switch Layer 3. Kriptografi symmetric menggunakan kunci yang sama, sedangkan asymmetric menggunakan pasangan public key dan private key."
+        },
+        {
+          "id": "MANJAR-022",
+          "sumber_materi": "Buku Teknologi dan manajemen jaringan.pdf",
+          "pertanyaan": "Apa kelemahan kabel koaksial pada topologi Linear Bus, dan bagaimana perbedaan metrik rute RIPv2, OSPF, dan EIGRP?",
+          "jawaban": "Terminasi atau impedansi yang tidak sesuai pada Linear Bus dapat menyebabkan pantulan sinyal. RIPv2 menggunakan hop count, OSPF menggunakan cost, sedangkan EIGRP menggunakan metrik komposit yang secara default mempertimbangkan bandwidth dan delay."
+        },
+        {
+          "id": "MANJAR-023",
+          "sumber_materi": "Project_Mid_Jaringan_Terintegrasi.pdf",
+          "pertanyaan": "Apa perbedaan fungsi A Record, MX Record, dan CNAME Record dalam integrasi layanan berbasis nama domain?",
+          "jawaban": "A Record memetakan nama host ke alamat IPv4. MX Record menentukan mail exchanger untuk menerima email domain. CNAME Record membuat alias yang menunjuk ke nama domain kanonis lainnya."
+        }
+      ]
+    },
+    {
+      "id": "praktikum_mikrotik",
+      "nama": "Praktikum Manajemen Jaringan (MikroTik)",
+      "jumlah_pertanyaan": 9,
+      "pertanyaan": [
+        {
+          "id": "MIKROTIK-001",
+          "sumber_materi": "Modul Praktikum Manajemen Jaringan",
+          "pertanyaan": "Apa kredensial login default pada Mikrotik RouterOS setelah proses instalasi selesai, dan perintah apa yang digunakan pada terminal untuk memeriksa daftar alamat IP yang telah dikonfigurasi?",
+          "jawaban": "Kredensial login default-nya adalah Username `admin` dan Password dikosongkan, sedangkan perintah untuk mengecek konfigurasi alamat IP di terminal adalah `ip address print`."
+        },
+        {
+          "id": "MIKROTIK-002",
+          "sumber_materi": "Modul Praktikum Manajemen Jaringan",
+          "pertanyaan": "Apa fungsi dari parameter Distance saat menambahkan rute statis (static route) di Mikrotik, dan bagaimana cara router menentukan prioritas rute berdasarkan nilai tersebut?",
+          "jawaban": "Parameter Distance berfungsi untuk menentukan prioritas rute dengan nilai default 1, di mana semakin kecil angkanya maka semakin tinggi prioritas rute tersebut sehingga Mikrotik akan memilih rute dengan Distance terkecil jika ada beberapa rute ke tujuan yang sama."
+        },
+        {
+          "id": "MIKROTIK-003",
+          "sumber_materi": "Modul Praktikum Manajemen Jaringan",
+          "pertanyaan": "Pada konfigurasi NAT di Mikrotik agar perangkat dalam jaringan lokal dapat mengakses internet menggunakan satu IP publik router, Chain dan Action apa yang harus dipilih?",
+          "jawaban": "Chain yang dipilih adalah `srcnat` dan Action yang digunakan adalah `masquerade`."
+        },
+        {
+          "id": "MIKROTIK-004",
+          "sumber_materi": "Modul Praktikum Manajemen Jaringan",
+          "pertanyaan": "Mengapa protokol L2TP sering dipadukan dengan IPSec dalam pembuatan VPN, serta port UDP nomor berapa saja yang perlu diizinkan pada Filter Rules firewall untuk mendukung lalu lintas IPSec?",
+          "jawaban": "L2TP tidak memiliki fitur enkripsi sendiri sehingga dipadukan dengan IPSec untuk memberikan enkripsi dan autentikasi data, serta port UDP yang harus diizinkan pada firewall adalah port `500` (untuk negosiasi kunci dan autentikasi) dan port `4500` (untuk NAT traversal)."
+        },
+        {
+          "id": "MIKROTIK-005",
+          "sumber_materi": "Modul Praktikum Manajemen Jaringan",
+          "pertanyaan": "Apa perbedaan fungsi antara alat Torch dan Traceroute dalam proses monitoring dan troubleshooting jaringan di Mikrotik?",
+          "jawaban": "Torch digunakan untuk memantau lalu lintas jaringan secara real-time (menampilkan alamat IP sumber/tujuan, port, dan protokol), sedangkan Traceroute digunakan untuk melacak dan menganalisis jalur (hop) yang dilewati paket data guna mengetahui titik lokasi terjadinya gangguan konektivitas."
+        },
+        {
+          "id": "MIKROTIK-006",
+          "sumber_materi": "Modul Praktikum Manajemen Jaringan",
+          "pertanyaan": "Apa perbedaan penggunaan antara Access Mode dan Trunk Mode saat mengonfigurasi port VLAN di Mikrotik?",
+          "jawaban": "Access Mode digunakan untuk port yang hanya terhubung ke perangkat dalam satu VLAN tertentu, sedangkan Trunk Mode digunakan untuk port yang mengangkut trafik dari banyak VLAN sekaligus melalui satu tautan fisik menggunakan penandaan (tagging) 802.1Q."
+        },
+        {
+          "id": "MIKROTIK-007",
+          "sumber_materi": "Modul Praktikum Manajemen Jaringan",
+          "pertanyaan": "Mengapa aturan Mangle diperlukan sebelum mengonfigurasi prioritas lalu lintas menggunakan Queue Tree, dan Action apa yang dipilih pada Mangle untuk menandai koneksi tersebut?",
+          "jawaban": "Aturan Mangle diperlukan untuk melakukan penandaan paket atau koneksi (packet marking) berdasarkan jenis trafik atau protokol tertentu agar dapat dikenali dan diprioritaskan di Queue Tree, dengan memilih Action berupa `mark connection`."
+        },
+        {
+          "id": "MIKROTIK-008",
+          "sumber_materi": "Modul Praktikum Manajemen Jaringan",
+          "pertanyaan": "Mode interface wireless apa yang harus dipilih agar perangkat Mikrotik dapat berfungsi sebagai pemancar Wi-Fi (Access Point), dan apa fungsi utama dari fitur Hotspot saat pengguna pertama kali mengakses browser?",
+          "jawaban": "Mode interface wireless yang dipilih adalah `AP Bridge`, dan fitur Hotspot berfungsi mengalihkan pengguna secara otomatis ke halaman login (captive portal) untuk proses autentikasi sebelum diberikan akses internet."
+        },
+        {
+          "id": "MIKROTIK-009",
+          "sumber_materi": "Modul Praktikum Manajemen Jaringan",
+          "pertanyaan": "Pada konfigurasi Port Forwarding di Mikrotik untuk mengarahkan lalu lintas eksternal (misalnya HTTP port 80) menuju server web internal di jaringan lokal, Chain dan Action apa yang diterapkan pada tab NAT?",
+          "jawaban": "Chain yang digunakan adalah `dstnat` dan Action yang dipilih adalah `dst-nat` dengan mengisi IP server internal pada kolom To Addresses dan nomor port pada kolom To Ports."
+        }
+      ]
+    },
+    {
+      "id": "praktikum_jarkom",
+      "nama": "Praktikum Jaringan Komputer",
+      "jumlah_pertanyaan": 9,
+      "pertanyaan": [
+        {
+          "id": "PRAKJARKOM-001",
+          "sumber_materi": "Modul Praktikum Jaringan Komputer",
+          "pertanyaan": "Apa yang dimaksud dengan Cisco Packet Tracer dan apa saja alat diagnostik yang tersedia untuk melakukan pengujian serta pemecahan masalah jaringan?",
+          "jawaban": "Cisco Packet Tracer adalah perangkat lunak simulasi jaringan yang dikembangkan oleh Cisco Systems untuk mendukung proses pembelajaran, pengujian, dan pemecahan masalah jaringan komputer tanpa memerlukan perangkat keras fisik. Perangkat lunak ini menyediakan beberapa alat diagnostik untuk menguji konektivitas dan menganalisis permasalahan jaringan, seperti ping untuk menguji koneksi antarperangkat, traceroute untuk mengetahui jalur yang dilalui paket data, serta fitur debugging untuk membantu mengidentifikasi kesalahan konfigurasi atau gangguan jaringan."
+        },
+        {
+          "id": "PRAKJARKOM-002",
+          "sumber_materi": "Modul Praktikum Jaringan Komputer",
+          "pertanyaan": "Jelaskan karakteristik dan penggunaan tiga jenis media transmisi kabel yang umum digunakan dalam jaringan komputer!",
+          "jawaban": "Tiga jenis media transmisi kabel yang umum digunakan dalam jaringan komputer adalah:\n- Kabel Tembaga (Copper Cable): Menggunakan penghantar berbahan tembaga untuk mengirimkan sinyal listrik. Contohnya adalah kabel UTP dan STP yang banyak digunakan pada jaringan LAN karena biaya pemasangannya relatif murah dan mendukung kecepatan transmisi data yang tinggi.\n- Kabel Serat Optik (Fiber Optic): Menggunakan serat kaca atau plastik untuk mengirimkan data dalam bentuk cahaya. Kabel ini memiliki keunggulan berupa kecepatan dan kapasitas transmisi tinggi, mampu menjangkau jarak jauh, serta tahan terhadap gangguan elektromagnetik. Jenisnya terdiri atas single-mode dan multi-mode.\n- Kabel Koaksial (Coaxial Cable): Memiliki struktur berupa inti tembaga, lapisan isolasi, konduktor luar, dan pelindung. Kabel ini umumnya digunakan pada antena televisi, sistem televisi kabel, serta layanan internet berbasis kabel."
+        },
+        {
+          "id": "PRAKJARKOM-003",
+          "sumber_materi": "Modul Praktikum Jaringan Komputer",
+          "pertanyaan": "Apa saja empat fungsi utama router dalam jaringan komputer dan bagaimana perbedaan antara static routing dan dynamic routing?",
+          "jawaban": "Empat fungsi utama router dalam jaringan komputer meliputi menghubungkan beberapa jaringan yang berbeda, menentukan jalur pengiriman paket data berdasarkan tabel routing, memungkinkan komunikasi antar-subnet, serta mendukung keamanan jaringan melalui fitur seperti firewall dan access control. Perbedaan static routing dan dynamic routing terletak pada proses penentuan jalur pengiriman data. Static routing menggunakan rute yang dikonfigurasi secara manual oleh administrator jaringan, sedangkan dynamic routing memungkinkan router mempelajari dan memperbarui informasi rute secara otomatis melalui protokol routing dengan router lainnya."
+        },
+        {
+          "id": "PRAKJARKOM-004",
+          "sumber_materi": "Modul Praktikum Jaringan Komputer",
+          "pertanyaan": "Pada lapisan berapa switch bekerja dalam model OSI dan apa perbedaan antara Port Mapping dengan Trunking pada switch?",
+          "jawaban": "Switch pada umumnya bekerja pada Data Link Layer (Layer 2) dalam model OSI untuk menghubungkan perangkat dalam jaringan LAN berdasarkan alamat MAC. Port Mapping berkaitan dengan pemetaan atau pencatatan hubungan antara alamat MAC perangkat dan port switch melalui tabel MAC Address, sehingga switch dapat menentukan port tujuan pengiriman frame. Sementara itu, trunking adalah teknik yang memungkinkan beberapa VLAN melewati satu koneksi fisik yang sama antara perangkat jaringan, seperti dua switch atau switch dengan router."
+        },
+        {
+          "id": "PRAKJARKOM-005",
+          "sumber_materi": "Modul Praktikum Jaringan Komputer",
+          "pertanyaan": "Jelaskan peran Access Point (AP), fungsi Service Set Identifier (SSID), dan tujuan penggunaan enkripsi WPA2 dalam jaringan nirkabel!",
+          "jawaban": "Access Point (AP) berfungsi sebagai titik akses yang menghubungkan perangkat nirkabel, seperti laptop, smartphone, dan perangkat IoT, dengan jaringan lokal. SSID (Service Set Identifier) adalah nama yang digunakan untuk mengidentifikasi suatu jaringan Wi-Fi agar pengguna dapat menemukan dan memilih jaringan yang ingin dihubungkan. Sementara itu, WPA2 (Wi-Fi Protected Access 2) adalah standar keamanan yang menggunakan mekanisme enkripsi untuk melindungi data selama proses komunikasi nirkabel serta mencegah akses yang tidak sah."
+        },
+        {
+          "id": "PRAKJARKOM-006",
+          "sumber_materi": "Modul Praktikum Jaringan Komputer",
+          "pertanyaan": "Apa perbedaan fungsi utama antara DHCP Server, DNS Server, Web Server, dan FTP Server dalam jaringan komputer?",
+          "jawaban": "Keempat layanan server tersebut memiliki fungsi yang berbeda, yaitu:\n- DHCP Server (Dynamic Host Configuration Protocol): Memberikan konfigurasi jaringan secara otomatis kepada perangkat, seperti alamat IP, subnet mask, default gateway, dan informasi DNS.\n- DNS Server (Domain Name System): Menerjemahkan nama domain menjadi alamat IP sehingga perangkat dapat menemukan server tujuan berdasarkan nama domain.\n- Web Server: Menyimpan dan menyediakan konten halaman web kepada pengguna melalui protokol HTTP atau HTTPS.\n- FTP Server (File Transfer Protocol): Menyediakan layanan transfer file antarperangkat dalam jaringan dengan pengaturan akun pengguna, hak akses, dan direktori penyimpanan."
+        },
+        {
+          "id": "PRAKJARKOM-007",
+          "sumber_materi": "Modul Praktikum Jaringan Komputer",
+          "pertanyaan": "Apa perbedaan mendasar antara Standard ACL dan Extended ACL berdasarkan parameter penyaringan, rentang nomor, dan penerapannya pada interface?",
+          "jawaban": "Standard ACL dan Extended ACL memiliki perbedaan dalam kemampuan penyaringan trafik jaringan. Standard ACL melakukan penyaringan berdasarkan alamat IP sumber (source IP address) dan secara umum menggunakan rentang nomor 1–99 serta 1300–1999. Sementara itu, Extended ACL dapat melakukan penyaringan berdasarkan alamat IP sumber dan tujuan, protokol, serta nomor port, dengan rentang nomor 100–199 dan 2000–2699. Keduanya dapat diterapkan pada interface router, baik dalam arah masuk (inbound) maupun keluar (outbound), sesuai kebutuhan pengaturan trafik jaringan."
+        },
+        {
+          "id": "PRAKJARKOM-008",
+          "sumber_materi": "Modul Praktikum Jaringan Komputer",
+          "pertanyaan": "Jelaskan pengertian Cloud Computing serta tiga jenis model layanan yang disediakannya!",
+          "jawaban": "Cloud Computing adalah model penyediaan layanan komputasi yang memungkinkan pengguna mengakses sumber daya teknologi informasi, seperti server, penyimpanan data, jaringan, dan perangkat lunak melalui internet. Cloud Computing memiliki tiga model layanan utama, yaitu:\n- Infrastructure as a Service (IaaS): Menyediakan infrastruktur komputasi virtual, seperti server, penyimpanan, dan jaringan yang dapat dikelola oleh pengguna.\n- Platform as a Service (PaaS): Menyediakan platform dan lingkungan pengembangan untuk membuat, menguji, serta menjalankan aplikasi tanpa harus mengelola infrastruktur dasar secara langsung.\n- Software as a Service (SaaS): Menyediakan aplikasi siap pakai yang dapat diakses pengguna melalui internet tanpa perlu melakukan instalasi dan pengelolaan infrastruktur aplikasi secara mandiri."
+        },
+        {
+          "id": "PRAKJARKOM-009",
+          "sumber_materi": "Modul Praktikum Jaringan Komputer",
+          "pertanyaan": "Apa perbedaan fungsi antara sensor dan aktuator dalam Internet of Things (IoT), serta protokol komunikasi apa saja yang umum digunakan dalam jaringan IoT?",
+          "jawaban": "Dalam ekosistem Internet of Things (IoT), sensor berfungsi mendeteksi dan mengukur kondisi lingkungan fisik, seperti suhu, kelembapan, cahaya, dan gerakan, kemudian mengirimkan hasil pengukurannya kepada sistem. Sementara itu, aktuator berfungsi menjalankan tindakan berdasarkan perintah yang diterima dari sistem, seperti menggerakkan motor, mengendalikan katup, atau mengaktifkan lampu. Beberapa protokol komunikasi yang umum digunakan dalam jaringan IoT meliputi MQTT (Message Queuing Telemetry Transport) untuk komunikasi berbasis pesan, CoAP (Constrained Application Protocol) untuk komunikasi pada perangkat dengan sumber daya terbatas, serta HTTP (Hypertext Transfer Protocol) untuk pertukaran data antara perangkat dan server melalui jaringan."
+        }
+      ]
+    }
+  ],
+  "pengujian_boundary": {
+    "nama": "Pertanyaan di Luar Konteks",
+    "jumlah_pertanyaan": 20,
+    "perilaku_yang_diharapkan": "Chatbot menyatakan pertanyaan berada di luar cakupan materi yang didukung, tidak mengarang jawaban seolah-olah berasal dari modul, dan mengarahkan pengguna kembali ke topik Jaringan Komputer, Jaringan Nirkabel, atau Manajemen Jaringan.",
+    "pertanyaan": [
+      {
+        "id": "BOUNDARY-001",
+        "pertanyaan": "Bagaimana cara membuat nasi goreng yang enak dan tidak terlalu berminyak?",
+        "jenis": "topik_non_teknologi",
+        "alasan_dikategorikan_di_luar_domain": "Memasak bukan bagian dari materi jaringan."
+      },
+      {
+        "id": "BOUNDARY-002",
+        "pertanyaan": "Siapa presiden pertama Republik Indonesia?",
+        "jenis": "pengetahuan_umum",
+        "alasan_dikategorikan_di_luar_domain": "Sejarah dan pengetahuan umum di luar domain jaringan."
+      },
+      {
+        "id": "BOUNDARY-003",
+        "pertanyaan": "Jelaskan proses fotosintesis pada tumbuhan!",
+        "jenis": "ilmu_pengetahuan_lain",
+        "alasan_dikategorikan_di_luar_domain": "Topik biologi di luar domain."
+      },
+      {
+        "id": "BOUNDARY-004",
+        "pertanyaan": "Apa rumus untuk menghitung luas lingkaran?",
+        "jenis": "matematika_umum",
+        "alasan_dikategorikan_di_luar_domain": "Matematika umum, bukan materi jaringan."
+      },
+      {
+        "id": "BOUNDARY-005",
+        "pertanyaan": "Buatkan puisi romantis tentang seseorang yang sedang merindukan kekasihnya.",
+        "jenis": "permintaan_kreatif",
+        "alasan_dikategorikan_di_luar_domain": "Permintaan kreatif di luar domain."
+      },
+      {
+        "id": "BOUNDARY-006",
+        "pertanyaan": "Bagaimana cara mengedit video menggunakan Adobe Premiere Pro?",
+        "jenis": "perangkat_lunak_non_domain",
+        "alasan_dikategorikan_di_luar_domain": "Penyuntingan video bukan materi jaringan."
+      },
+      {
+        "id": "BOUNDARY-007",
+        "pertanyaan": "Apa penyebab utama inflasi dan bagaimana dampaknya terhadap perekonomian?",
+        "jenis": "ekonomi",
+        "alasan_dikategorikan_di_luar_domain": "Topik ekonomi di luar domain."
+      },
+      {
+        "id": "BOUNDARY-008",
+        "pertanyaan": "Jelaskan perbedaan machine learning, deep learning, dan generative AI!",
+        "jenis": "teknologi_di_luar_domain",
+        "alasan_dikategorikan_di_luar_domain": "AI tidak termasuk cakupan materi jaringan yang disediakan."
+      },
+      {
+        "id": "BOUNDARY-009",
+        "pertanyaan": "Bagaimana cara merakit komputer desktop untuk kebutuhan desain grafis?",
+        "jenis": "perangkat_keras_non_domain",
+        "alasan_dikategorikan_di_luar_domain": "Perakitan komputer umum di luar materi jaringan."
+      },
+      {
+        "id": "BOUNDARY-010",
+        "pertanyaan": "Apa rekomendasi tempat wisata menarik di Makassar untuk liburan akhir pekan?",
+        "jenis": "rekomendasi_lokal",
+        "alasan_dikategorikan_di_luar_domain": "Rekomendasi wisata di luar domain."
+      },
+      {
+        "id": "BOUNDARY-011",
+        "pertanyaan": "Bagaimana cara menghitung dosis obat untuk orang dewasa yang sedang demam?",
+        "jenis": "kesehatan",
+        "alasan_dikategorikan_di_luar_domain": "Pertanyaan medis di luar domain dan tidak boleh dijawab dengan mengarang."
+      },
+      {
+        "id": "BOUNDARY-012",
+        "pertanyaan": "Terjemahkan kalimat 'I will attend the meeting tomorrow' ke bahasa Indonesia.",
+        "jenis": "tugas_bahasa",
+        "alasan_dikategorikan_di_luar_domain": "Penerjemahan bahasa di luar domain."
+      },
+      {
+        "id": "BOUNDARY-013",
+        "pertanyaan": "Berapa harga saham Apple hari ini dan apakah sebaiknya saya membelinya?",
+        "jenis": "keuangan_dan_investasi",
+        "alasan_dikategorikan_di_luar_domain": "Pasar saham dan saran investasi di luar domain."
+      },
+      {
+        "id": "BOUNDARY-014",
+        "pertanyaan": "Buatkan kode Python untuk menghitung nilai rata-rata dari sebuah daftar angka.",
+        "jenis": "pemrograman_non_domain",
+        "alasan_dikategorikan_di_luar_domain": "Pemrograman umum tanpa kaitan langsung dengan materi jaringan."
+      },
+      {
+        "id": "BOUNDARY-015",
+        "pertanyaan": "Ceritakan sejarah Kerajaan Majapahit secara singkat.",
+        "jenis": "sejarah",
+        "alasan_dikategorikan_di_luar_domain": "Sejarah di luar cakupan materi."
+      },
+      {
+        "id": "BOUNDARY-016",
+        "pertanyaan": "Apa konfigurasi terbaik untuk meng-overclock prosesor agar performa gaming meningkat?",
+        "jenis": "perangkat_keras_non_domain",
+        "alasan_dikategorikan_di_luar_domain": "Optimasi prosesor bukan materi jaringan."
+      },
+      {
+        "id": "BOUNDARY-017",
+        "pertanyaan": "Bagaimana cara memperbaiki hubungan pertemanan yang sedang mengalami konflik?",
+        "jenis": "saran_personal",
+        "alasan_dikategorikan_di_luar_domain": "Saran hubungan personal di luar domain."
+      },
+      {
+        "id": "BOUNDARY-018",
+        "pertanyaan": "Jelaskan teori relativitas khusus yang dikemukakan Albert Einstein!",
+        "jenis": "fisika",
+        "alasan_dikategorikan_di_luar_domain": "Fisika di luar domain."
+      },
+      {
+        "id": "BOUNDARY-019",
+        "pertanyaan": "Apa strategi pemasaran digital yang efektif untuk bisnis kuliner kecil?",
+        "jenis": "bisnis_dan_pemasaran",
+        "alasan_dikategorikan_di_luar_domain": "Pemasaran bisnis di luar domain."
+      },
+      {
+        "id": "BOUNDARY-020",
+        "pertanyaan": "Siapa pemenang pertandingan sepak bola tadi malam?",
+        "jenis": "informasi_olahraga",
+        "alasan_dikategorikan_di_luar_domain": "Informasi olahraga terkini di luar domain."
+      }
+    ]
+  }
+}

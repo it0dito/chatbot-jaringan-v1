@@ -1,0 +1,438 @@
+{
+  "detail_pengujian_dalam_domain": [
+    {
+      "id": "JARKOM-001",
+      "kategori": "Jaringan Komputer",
+      "pertanyaan": "Apa perbedaan mendasar antara fungsi Access Port dan Trunk Port dalam konfigurasi VLAN pada sebuah switch?",
+      "jawaban_referensi": "Access Port membawa lalu lintas dari satu VLAN dan umumnya terhubung ke perangkat akhir. Trunk Port membawa lalu lintas dari beberapa VLAN sekaligus, biasanya untuk menghubungkan switch dengan switch lain atau switch dengan router.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "JARKOM-002",
+      "kategori": "Jaringan Komputer",
+      "pertanyaan": "Mengapa Switch dinilai lebih efisien dan aman dibandingkan Hub dalam mengelola lalu lintas data di jaringan?",
+      "jawaban_referensi": "Switch bekerja pada Layer 2 dan meneruskan frame berdasarkan MAC Address ke port tujuan. Hub bekerja pada Layer 1 dan mengulang sinyal ke seluruh port, sehingga lebih banyak perangkat menerima lalu lintas yang sama dan potensi collision lebih besar.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "JARKOM-003",
+      "kategori": "Jaringan Komputer",
+      "pertanyaan": "Apa kelebihan dan kekurangan utama dari penggunaan topologi jaringan Mesh?",
+      "jawaban_referensi": "Topologi Mesh menyediakan banyak jalur alternatif sehingga meningkatkan redundansi dan keandalan. Kekurangannya adalah kebutuhan kabel atau koneksi yang banyak, biaya tinggi, serta konfigurasi dan pemeliharaan yang kompleks.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "JARKOM-004",
+      "kategori": "Jaringan Komputer",
+      "pertanyaan": "Jelaskan perbedaan antara Jaringan Pribadi (Private Network) dan Jaringan Publik (Public Network) beserta contohnya!",
+      "jawaban_referensi": "Private Network dibatasi untuk individu atau organisasi tertentu, misalnya LAN rumah atau kantor. Public Network menyediakan akses bagi banyak pengguna, misalnya internet atau hotspot publik.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "JARKOM-005",
+      "kategori": "Jaringan Komputer",
+      "pertanyaan": "Apa fungsi dari perintah `ip route 0.0.0.0 0.0.0.0 [Next-Hop IP]` dalam konfigurasi routing pada router?",
+      "jawaban_referensi": "Perintah tersebut membuat default route. Paket yang tujuannya tidak cocok dengan entri rute yang lebih spesifik di tabel routing diteruskan ke alamat next-hop yang ditentukan.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "JARKOM-006",
+      "kategori": "Jaringan Komputer",
+      "pertanyaan": "Bagaimana pemetaan penggabungan lapisan-lapisan pada model OSI (7 lapisan) ke dalam model TCP/IP (4 lapisan)?",
+      "jawaban_referensi": "Application, Presentation, dan Session OSI dipetakan ke Application TCP/IP; Transport ke Transport; Network ke Internet; serta Data Link dan Physical ke Network Access atau Link.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "JARKOM-007",
+      "kategori": "Jaringan Komputer",
+      "pertanyaan": "Dalam konfigurasi Access Control List (ACL) pada router, apa perbedaan antara penempatan trafik inbound (in) dan outbound (out) pada sebuah interface?",
+      "jawaban_referensi": "ACL inbound memeriksa paket ketika memasuki interface router. ACL outbound memeriksa paket ketika akan meninggalkan interface router.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "JARKOM-008",
+      "kategori": "Jaringan Komputer",
+      "pertanyaan": "Mengapa jumlah maksimal bit yang dapat digunakan untuk Network ID dalam aturan pembuatan subnet mask dibatasi hanya sampai 30 bit (/30)?",
+      "jawaban_referensi": "Dalam subnet IPv4 konvensional yang membutuhkan alamat network, broadcast, dan minimal dua alamat host, prefix /30 menyisakan dua bit host. Namun, /31 dapat digunakan pada tautan point-to-point tertentu berdasarkan RFC 3021, sehingga /30 bukan batas mutlak untuk semua penggunaan.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "JARKOM-009",
+      "kategori": "Jaringan Komputer",
+      "pertanyaan": "Apa fungsi dari kabel khusus jenis Rollover (Kabel Konsol) dan bagaimana karakteristik susunan pinnya?",
+      "jawaban_referensi": "Kabel Rollover digunakan untuk mengakses port konsol perangkat jaringan. Susunan pin di satu ujung dibalik pada ujung lainnya: 1 ke 8, 2 ke 7, 3 ke 6, 4 ke 5, dan seterusnya.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "JARKOM-010",
+      "kategori": "Jaringan Komputer",
+      "pertanyaan": "Bagaimana cara kerja protokol routing dinamis OSPF (Open Shortest Path First) dalam menentukan jalur pengiriman data terbaik?",
+      "jawaban_referensi": "OSPF adalah protokol link-state. Router bertukar LSA, membangun link-state database untuk area terkait, lalu menjalankan algoritma Dijkstra atau Shortest Path First untuk menghitung jalur dengan total cost terendah.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "JARKOM-011",
+      "kategori": "Jaringan Komputer",
+      "pertanyaan": "Berapa jumlah subnet dan jumlah host valid per subnet yang dihasilkan dari alamat jaringan kelas C 192.168.1.0/26, serta sebutkan blok subnet-nya?",
+      "jawaban_referensi": "Dengan asumsi jaringan induk 192.168.1.0/24 dibagi menjadi subnet /26, terbentuk 4 subnet. Enam bit host menghasilkan 2^6 - 2 = 62 host valid per subnet. Ukuran blok 64, sehingga alamat network subnet adalah 192.168.1.0, 192.168.1.64, 192.168.1.128, dan 192.168.1.192.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "JARKOM-012",
+      "kategori": "Jaringan Komputer",
+      "pertanyaan": "Apa perbedaan sifat dan mekanisme kerja antara protokol TCP (Transmission Control Protocol) dan UDP (User Datagram Protocol) pada lapisan Transport?",
+      "jawaban_referensi": "TCP bersifat connection-oriented dan menyediakan pengiriman andal melalui sequence number, acknowledgement, retransmisi, serta pengurutan data. UDP bersifat connectionless dan tidak menyediakan jaminan pengiriman atau pengurutan bawaan, sehingga overhead lebih rendah dan cocok untuk aplikasi real-time tertentu.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-001",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Apa perbedaan mendasar antara kebijakan Mandatory Access Control (MAC) dan Discretionary Access Control (DAC)?",
+      "jawaban_referensi": "MAC menerapkan label keamanan dan aturan terpusat untuk menentukan akses subjek terhadap objek. DAC memberikan kewenangan kepada pemilik sumber daya untuk menentukan siapa yang boleh mengaksesnya.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-002",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Mengapa dalam instalasi jaringan nirkabel jarak jauh (Line of Sight), area 1st Fresnel Zone harus dijaga agar tetap bersih dari hambatan seperti pohon atau gedung?",
+      "jawaban_referensi": "Hambatan pada zona Fresnel dapat menyebabkan difraksi dan mengganggu propagasi gelombang sehingga kualitas serta daya terima sinyal menurun, meskipun kedua antena terlihat secara visual. Sekitar 60% clearance zona Fresnel pertama lazim dijadikan acuan minimum.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-003",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Bagaimana cara kerja metode Time Division Duplex (TDD) pada WiMAX dalam mengatur lalu lintas pengiriman dan penerimaan data?",
+      "jawaban_referensi": "TDD menggunakan kanal frekuensi yang sama untuk uplink dan downlink, tetapi memisahkan keduanya berdasarkan slot waktu. Durasi slot dapat disesuaikan dengan kebutuhan upload dan download.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-004",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Jelaskan fungsi dari tiga elemen utama penyusun antena directional Yagi-Uda!",
+      "jawaban_referensi": "Dipole merupakan elemen aktif. Reflektor berada di belakang elemen aktif untuk membantu membentuk pola radiasi ke arah depan. Director berada di depan elemen aktif untuk meningkatkan pengarahan energi ke arah yang dituju.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-005",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Apa perbedaan utama antara teknologi LoRa dan LoRaWAN?",
+      "jawaban_referensi": "LoRa adalah teknologi lapisan fisik atau modulasi radio untuk komunikasi jarak jauh dengan laju data rendah. LoRaWAN adalah protokol dan arsitektur jaringan yang mengatur akses media, keamanan, perangkat, gateway, dan Network Server.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-006",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Bagaimana mekanisme serangan gabungan antara Deauthentication dan Evil Twin bekerja untuk menjebak korban di jaringan Wi-Fi publik?",
+      "jawaban_referensi": "Pelaku menyiapkan access point palsu dengan SSID yang menyerupai jaringan sah. Paket deauthentication dapat digunakan untuk mengganggu koneksi korban ke access point asli, sehingga korban berpotensi tersambung ke access point palsu. Perpindahan otomatis bergantung pada konfigurasi dan perilaku perangkat korban.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-007",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Mengapa pemilihan channel pada pita frekuensi 2.4 GHz sering disarankan menggunakan channel 1, 6, atau 11?",
+      "jawaban_referensi": "Dengan lebar kanal 20 MHz dan pengaturan kanal yang umum, kanal 1, 6, dan 11 tidak saling tumpang tindih. Pemilihan ini dapat mengurangi interferensi antar-access point yang berdekatan. Ketersediaan kanal bergantung pada regulasi negara.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-008",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Apa yang dimaksud dengan sifat Reciprocity pada sebuah antena?",
+      "jawaban_referensi": "Reciprocity adalah prinsip bahwa karakteristik transmisi dan penerimaan antena pada kondisi dan medium yang sama saling berkaitan. Pola radiasi saat memancar secara umum sama dengan pola respons penerimaannya.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-009",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Apa perbedaan mendasar dalam struktur komunikasi antara jaringan Wi-Fi mode Ad-Hoc dan mode Infrastruktur?",
+      "jawaban_referensi": "Mode Ad-Hoc memungkinkan perangkat berkomunikasi langsung secara peer-to-peer tanpa access point pusat. Mode Infrastruktur menggunakan access point sebagai pusat komunikasi yang menghubungkan klien nirkabel dan dapat menghubungkannya ke jaringan kabel.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-010",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Bagaimana cara Bluetooth versi 3.0 + HS (High Speed) mencapai kecepatan transfer data hingga 24 Mbps?",
+      "jawaban_referensi": "Bluetooth 3.0 + HS menggunakan Alternative MAC/PHY (AMP). Bluetooth menangani penemuan perangkat, pairing, dan pembentukan koneksi, sedangkan transfer data berkecepatan tinggi dapat dialihkan melalui radio IEEE 802.11 yang didukung perangkat.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-011",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Apa yang terjadi pada kekuatan sinyal nirkabel ketika mengalami fenomena Absorption dan Multipath?",
+      "jawaban_referensi": "Absorption terjadi ketika energi gelombang diserap material sehingga daya sinyal berkurang. Multipath terjadi ketika sinyal tiba melalui beberapa jalur akibat pantulan, sehingga dapat terjadi penguatan atau pelemahan akibat interferensi konstruktif maupun destruktif.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-012",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Bagaimana perbedaan kondisi dan fungsi lapisan ionosfer pada siang hari dan malam hari dalam propagasi Sky Wave?",
+      "jawaban_referensi": "Pada siang hari, radiasi matahari meningkatkan ionisasi dan membentuk lapisan D, E, serta F yang dapat terbagi menjadi F1 dan F2. Lapisan D cenderung menyerap gelombang HF. Pada malam hari lapisan D melemah atau menghilang dan F1 serta F2 cenderung menyatu, sehingga kondisi propagasi HF berubah.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-013",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Mengapa penggunaan pita frekuensi 3,5 GHz untuk layanan Fixed WiMAX dapat menimbulkan isu di Indonesia?",
+      "jawaban_referensi": "Penggunaan pita 3,5 GHz perlu memperhatikan alokasi frekuensi dan layanan lain yang telah beroperasi pada pita terkait, termasuk layanan satelit. Koeksistensi tanpa pengaturan teknis dan regulasi yang tepat dapat menimbulkan interferensi.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-014",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Sebutkan dua segmen utama dalam arsitektur jaringan VSAT beserta komponen-komponen penyusunnya!",
+      "jawaban_referensi": "Ground Segment mencakup perangkat bumi seperti Indoor Unit atau modem satelit dan Outdoor Unit yang meliputi antena, feed, BUC, serta LNB. Space Segment mencakup satelit yang menerima, memproses atau menguatkan, lalu meneruskan sinyal.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-015",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Apa mata kuliah prasyarat yang harus ditempuh sebelum mengambil mata kuliah Jaringan Nirkabel (TIN630003) dan berapa bobot SKS-nya?",
+      "jawaban_referensi": "Berdasarkan informasi RPS yang diberikan, mata kuliah prasyaratnya adalah Jaringan Komputer dan bobot mata kuliah Jaringan Nirkabel adalah 3 SKS teori.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-016",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Mengapa dalam sistem transmisi satelit frekuensi Uplink dan Downlink harus dibuat berbeda?",
+      "jawaban_referensi": "Pemisahan frekuensi uplink dan downlink membantu mencegah interferensi antara sinyal yang diterima dan dipancarkan kembali oleh sistem satelit serta memungkinkan pemisahan jalur komunikasi pada perangkat radio dan transponder.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-017",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Berapa panjang total dan panjang masing-masing lengan kawat yang dibutuhkan untuk merakit antena Dipole 1/2 lambda pada frekuensi kerja 2,4 GHz?",
+      "jawaban_referensi": "Panjang gelombang teoritis pada 2,4 GHz sekitar 12,5 cm, sehingga setengah panjang gelombangnya sekitar 6,25 cm. Dipole setengah gelombang praktis biasanya sedikit lebih pendek dari nilai teoritis dan terdiri atas dua lengan hampir sama panjang. Dimensi akhir perlu disesuaikan dengan faktor kecepatan, diameter konduktor, dan lingkungan pemasangan.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "NIRKABEL-018",
+      "kategori": "Jaringan Nirkabel",
+      "pertanyaan": "Apa faktor utama yang menyebabkan pamor teknologi jaringan WiMAX di Indonesia meredup setelah sempat berkembang pada tahun 2011–2012?",
+      "jawaban_referensi": "Beberapa faktor yang berpengaruh adalah perkembangan ekosistem LTE yang lebih luas dan kompetitif, tantangan model bisnis, ketersediaan perangkat, investasi, serta kebijakan dan alokasi spektrum. Penurunan pemanfaatan tidak disebabkan oleh satu faktor tunggal.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-001",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa perbedaan utama arsitektur jaringan Peer-to-Peer dan Client-Server?",
+      "jawaban_referensi": "Peer-to-Peer tidak bergantung pada server pusat dan perangkat dapat berbagi sumber daya secara langsung. Client-Server menggunakan server terpusat untuk menyediakan layanan dan mengelola permintaan klien.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-002",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa perbedaan fungsi antara MDF (Main Distribution Frame) dan IDF (Intermediate Distribution Frame)?",
+      "jawaban_referensi": "MDF adalah titik distribusi utama untuk terminasi dan distribusi kabel backbone. IDF adalah titik distribusi perantara, umumnya di lantai atau area tertentu, yang menghubungkan perangkat pengguna ke MDF.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-003",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa perbedaan antara Bit Rate dan Baud Rate dalam transmisi data?",
+      "jawaban_referensi": "Bit Rate adalah jumlah bit yang ditransmisikan per detik. Baud Rate adalah jumlah simbol atau perubahan keadaan sinyal per detik. Satu simbol dapat merepresentasikan satu atau lebih bit.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-004",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa perbedaan cara kerja Switch dan Router dalam membagi domain jaringan?",
+      "jawaban_referensi": "Switch Layer 2 memisahkan collision domain pada setiap port dan umumnya meneruskan broadcast dalam VLAN yang sama. Router Layer 3 memisahkan broadcast domain antar-interface atau subnet dan meneruskan paket berdasarkan alamat IP.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-005",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Sebutkan empat lapisan pada Model DoD beserta padanannya pada Model OSI!",
+      "jawaban_referensi": "Process/Application mencakup Application, Presentation, dan Session OSI; Host-to-Host setara dengan Transport; Internet setara dengan Network; Network Access setara dengan Data Link dan Physical.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-006",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa perbedaan fungsi blok alamat IPv4 Privat dengan APIPA?",
+      "jawaban_referensi": "IPv4 privat digunakan untuk komunikasi internal dan tidak dirutekan langsung di internet publik. APIPA menggunakan rentang 169.254.0.0/16 dan dapat diberikan otomatis ketika konfigurasi IPv4 melalui DHCP gagal serta tidak tersedia alamat lain.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-007",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa tujuan utama dilakukannya subnetting pada jaringan IP?",
+      "jawaban_referensi": "Subnetting membagi jaringan IP menjadi beberapa subnet yang lebih kecil untuk mengatur penggunaan alamat IP, membatasi broadcast domain sesuai desain, meningkatkan pengelolaan, serta membantu isolasi gangguan dan penerapan kebijakan keamanan.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-008",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Sebutkan empat kategori faktor autentikasi yang sering dibahas dalam Multi-Factor Authentication (MFA)!",
+      "jawaban_referensi": "Kategori yang umum adalah sesuatu yang diketahui (password atau PIN), sesuatu yang dimiliki (token atau smartcard), sesuatu yang melekat pada diri (biometrik), dan faktor lokasi atau konteks. MFA secara ketat menggabungkan minimal dua faktor dari kategori berbeda.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-009",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa perbedaan dasar protokol perutean Distance Vector dan Link State?",
+      "jawaban_referensi": "Distance Vector bertukar informasi rute dengan router tetangga dan menggunakan metrik tertentu, misalnya RIP menggunakan hop count. Link State menyebarkan informasi status link, membangun basis data topologi, lalu menghitung jalur menggunakan algoritma SPF seperti Dijkstra.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-010",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa fungsi fitur BPDU Guard dan Port Akses Suara pada switch?",
+      "jawaban_referensi": "BPDU Guard melindungi port edge dengan menonaktifkan port ketika menerima BPDU yang tidak diharapkan, sesuai konfigurasi. Voice VLAN memisahkan lalu lintas telepon IP dari lalu lintas data PC meskipun menggunakan satu port fisik.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-011",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa perbedaan enkripsi WPA dengan WPA2, serta fungsi Management Frame Protection (MFP)?",
+      "jawaban_referensi": "WPA generasi awal umumnya menggunakan TKIP, sedangkan WPA2 menggunakan AES-CCMP. Management Frame Protection membantu melindungi frame manajemen tertentu dari pemalsuan dan gangguan, sesuai dukungan standar 802.11w atau PMF.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-012",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa yang dimaksud dengan Manajemen Out-of-Band pada server?",
+      "jawaban_referensi": "Manajemen Out-of-Band adalah pengelolaan server melalui jalur manajemen khusus yang terpisah dari jaringan produksi, misalnya iLO atau iDRAC, sehingga server tetap dapat diakses ketika jaringan utama terganggu.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-013",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Bagaimana teknik Protocol Tunneling dapat digunakan untuk melewati kebijakan firewall?",
+      "jawaban_referensi": "Protocol tunneling mengenkapsulasi lalu lintas suatu protokol ke protokol lain. Teknik ini dapat disalahgunakan untuk menyamarkan komunikasi yang dilarang melalui protokol yang diizinkan firewall. Mitigasinya mencakup pembatasan egress, inspeksi protokol, dan logging.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-014",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa perbedaan firewall Stateless dan Stateful, serta perbedaan Cold Site dan Hot Site?",
+      "jawaban_referensi": "Firewall Stateless mengevaluasi paket secara individual tanpa melacak sesi, sedangkan Stateful melacak status koneksi. Cold Site menyediakan fasilitas dasar yang memerlukan persiapan sebelum operasional, sedangkan Hot Site memiliki infrastruktur dan sistem yang telah disiapkan untuk mengambil alih layanan lebih cepat.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-015",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa konsep dari Traffic Shaping (HTB/CBQ) dan Dynamic DNS (DDNS) dalam manajemen jaringan?",
+      "jawaban_referensi": "Traffic Shaping mengatur laju dan antrean lalu lintas untuk mengelola bandwidth dan QoS; HTB dan CBQ adalah contoh mekanisme class-based queuing. DDNS memperbarui pemetaan nama domain ketika alamat IP layanan berubah.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-016",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Sebutkan tiga tujuan utama manajemen jaringan dan alasan server umumnya dapat dijalankan tanpa GUI!",
+      "jawaban_referensi": "Tujuan utama manajemen jaringan mencakup kinerja, keandalan atau ketersediaan, dan keamanan. Server dapat dijalankan tanpa GUI untuk mengurangi penggunaan sumber daya, memperkecil komponen yang perlu dipelihara, dan mendukung administrasi melalui command line.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-017",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa perbedaan antara Iterative Query dan Recursive Query pada sistem DNS?",
+      "jawaban_referensi": "Pada recursive query, server DNS yang diminta bertanggung jawab mencari jawaban akhir atau mengembalikan kesalahan. Pada iterative query, server memberikan jawaban yang diketahui atau referral ke server lain, lalu resolver melanjutkan pencarian.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-018",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa perbedaan mekanisme transfer berkas FTP dengan NFS, serta peran protokol SMB pada Samba?",
+      "jawaban_referensi": "FTP mentransfer berkas antara klien dan server. NFS menyediakan akses sistem berkas jarak jauh. Samba mengimplementasikan SMB/CIFS agar sistem Linux atau UNIX dapat berbagi berkas dan printer dengan lingkungan Windows.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-019",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Jelaskan tiga kategori kepemilikan hak akses berkas di Linux dan otoritas pengguna root!",
+      "jawaban_referensi": "Kategori izin berkas Linux adalah Owner, Group, dan Other. Masing-masing dapat memiliki izin Read, Write, dan Execute. Root memiliki hak administratif yang sangat luas dan umumnya dapat mengakses atau mengubah berkas meskipun izin biasa tidak mengizinkannya.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-020",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Bagaimana perbedaan cara Web Server memproses dokumen statis dibandingkan halaman dinamis?",
+      "jawaban_referensi": "Dokumen statis disajikan dari konten yang tersimpan. Halaman dinamis dihasilkan atau dirakit saat diminta melalui pemrosesan aplikasi sisi server dan dapat melibatkan database sebelum hasilnya dikirim ke browser.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-021",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Mengapa komunikasi antar-VLAN membutuhkan Router, dan apa perbedaan kriptografi Symmetric dengan Asymmetric pada VPN?",
+      "jawaban_referensi": "Komunikasi antar-VLAN membutuhkan fungsi Layer 3 karena setiap VLAN umumnya memiliki broadcast domain dan subnet berbeda. Routing dapat dilakukan oleh router atau switch Layer 3. Kriptografi symmetric menggunakan kunci yang sama, sedangkan asymmetric menggunakan pasangan public key dan private key.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-022",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa kelemahan kabel koaksial pada topologi Linear Bus, dan bagaimana perbedaan metrik rute RIPv2, OSPF, dan EIGRP?",
+      "jawaban_referensi": "Terminasi atau impedansi yang tidak sesuai pada Linear Bus dapat menyebabkan pantulan sinyal. RIPv2 menggunakan hop count, OSPF menggunakan cost, sedangkan EIGRP menggunakan metrik komposit yang secara default mempertimbangkan bandwidth dan delay.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MANJAR-023",
+      "kategori": "Manajemen Jaringan",
+      "pertanyaan": "Apa perbedaan fungsi A Record, MX Record, dan CNAME Record dalam integrasi layanan berbasis nama domain?",
+      "jawaban_referensi": "A Record memetakan nama host ke alamat IPv4. MX Record menentukan mail exchanger untuk menerima email domain. CNAME Record membuat alias yang menunjuk ke nama domain kanonis lainnya.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MIKROTIK-001",
+      "kategori": "Praktikum Manajemen Jaringan (MikroTik)",
+      "pertanyaan": "Apa kredensial login default pada Mikrotik RouterOS setelah proses instalasi selesai, dan perintah apa yang digunakan pada terminal untuk memeriksa daftar alamat IP yang telah dikonfigurasi?",
+      "jawaban_referensi": "Kredensial login default-nya adalah Username `admin` dan Password dikosongkan, sedangkan perintah untuk mengecek konfigurasi alamat IP di terminal adalah `ip address print`.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MIKROTIK-002",
+      "kategori": "Praktikum Manajemen Jaringan (MikroTik)",
+      "pertanyaan": "Apa fungsi dari parameter Distance saat menambahkan rute statis (static route) di Mikrotik, dan bagaimana cara router menentukan prioritas rute berdasarkan nilai tersebut?",
+      "jawaban_referensi": "Parameter Distance berfungsi untuk menentukan prioritas rute dengan nilai default 1, di mana semakin kecil angkanya maka semakin tinggi prioritas rute tersebut sehingga Mikrotik akan memilih rute dengan Distance terkecil jika ada beberapa rute ke tujuan yang sama.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MIKROTIK-003",
+      "kategori": "Praktikum Manajemen Jaringan (MikroTik)",
+      "pertanyaan": "Pada konfigurasi NAT di Mikrotik agar perangkat dalam jaringan lokal dapat mengakses internet menggunakan satu IP publik router, Chain dan Action apa yang harus dipilih?",
+      "jawaban_referensi": "Chain yang dipilih adalah `srcnat` dan Action yang digunakan adalah `masquerade`.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MIKROTIK-004",
+      "kategori": "Praktikum Manajemen Jaringan (MikroTik)",
+      "pertanyaan": "Mengapa protokol L2TP sering dipadukan dengan IPSec dalam pembuatan VPN, serta port UDP nomor berapa saja yang perlu diizinkan pada Filter Rules firewall untuk mendukung lalu lintas IPSec?",
+      "jawaban_referensi": "L2TP tidak memiliki fitur enkripsi sendiri sehingga dipadukan dengan IPSec untuk memberikan enkripsi dan autentikasi data, serta port UDP yang harus diizinkan pada firewall adalah port `500` (untuk negosiasi kunci dan autentikasi) dan port `4500` (untuk NAT traversal).",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MIKROTIK-005",
+      "kategori": "Praktikum Manajemen Jaringan (MikroTik)",
+      "pertanyaan": "Apa perbedaan fungsi antara alat Torch dan Traceroute dalam proses monitoring dan troubleshooting jaringan di Mikrotik?",
+      "jawaban_referensi": "Torch digunakan untuk memantau lalu lintas jaringan secara real-time (menampilkan alamat IP sumber/tujuan, port, dan protokol), sedangkan Traceroute digunakan untuk melacak dan menganalisis jalur (hop) yang dilewati paket data guna mengetahui titik lokasi terjadinya gangguan konektivitas.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MIKROTIK-006",
+      "kategori": "Praktikum Manajemen Jaringan (MikroTik)",
+      "pertanyaan": "Apa perbedaan penggunaan antara Access Mode dan Trunk Mode saat mengonfigurasi port VLAN di Mikrotik?",
+      "jawaban_referensi": "Access Mode digunakan untuk port yang hanya terhubung ke perangkat dalam satu VLAN tertentu, sedangkan Trunk Mode digunakan untuk port yang mengangkut trafik dari banyak VLAN sekaligus melalui satu tautan fisik menggunakan penandaan (tagging) 802.1Q.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MIKROTIK-007",
+      "kategori": "Praktikum Manajemen Jaringan (MikroTik)",
+      "pertanyaan": "Mengapa aturan Mangle diperlukan sebelum mengonfigurasi prioritas lalu lintas menggunakan Queue Tree, dan Action apa yang dipilih pada Mangle untuk menandai koneksi tersebut?",
+      "jawaban_referensi": "Aturan Mangle diperlukan untuk melakukan penandaan paket atau koneksi (packet marking) berdasarkan jenis trafik atau protokol tertentu agar dapat dikenali dan diprioritaskan di Queue Tree, dengan memilih Action berupa `mark connection`.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MIKROTIK-008",
+      "kategori": "Praktikum Manajemen Jaringan (MikroTik)",
+      "pertanyaan": "Mode interface wireless apa yang harus dipilih agar perangkat Mikrotik dapat berfungsi sebagai pemancar Wi-Fi (Access Point), dan apa fungsi utama dari fitur Hotspot saat pengguna pertama kali mengakses browser?",
+      "jawaban_referensi": "Mode interface wireless yang dipilih adalah `AP Bridge`, dan fitur Hotspot berfungsi mengalihkan pengguna secara otomatis ke halaman login (captive portal) untuk proses autentikasi sebelum diberikan akses internet.",
+      "skor_relevansi": 0
+    },
+    {
+      "id": "MIKROTIK-009",
+      "kategori": "Praktikum Manajemen Jaringan (MikroTik)",
+      "pertanyaan": "Pada konfigurasi Port Forwarding di Mikrotik untuk mengarahkan lalu lintas eksternal (misalnya HTTP port 80) menuju server web internal di jaringan lokal, Chain dan Action apa yang diterapkan pada tab NAT?",
+      "jawaban_referensi": "Chain yang digunakan adalah `dstnat` dan Action yang dipilih adalah `dst-nat` dengan mengisi IP server internal pada kolom To Addresses dan nomor port pada kolom To Ports.",
+      "skor_relevansi": 0
+    }
+  ]
+}
